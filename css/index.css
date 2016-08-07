@@ -65,13 +65,19 @@ html {
 .page1 img {
     position: absolute;
     opacity: 0;
+    top: 2rem;
+    left: 1.5rem;
+    width: 3rem;
+    height: 3rem;
 }
 
-.page1 img:nth-child(1) {
-    top: 2rem;
-    left: 2rem;
-    width: 2rem;
-    height: 2rem;
+.page1 span{
+    position: absolute;
+    left: 1rem;
+    top: 7rem;
+    width: 4rem;
+    font-size: .32rem;
+    opacity: 0;
 }
 
 /*
@@ -82,6 +88,11 @@ html {
 #page1 img:nth-child(1) {
     -webkit-animation: bounceInLeft 1s both;
     animation: bounceInLeft 1s both;
+}
+
+#page1 span:nth-child(2) {
+    -webkit-animation: bounceInRight 1s both;
+    animation: bounceInRight 1s both;
 }
 
 
@@ -136,7 +147,12 @@ html {
 
 /*设置第二屏幕的动画*/
 #page2 img:nth-child(1) {
-    -webkit-animation: bounceInLeft 1s both;
+    -webkit-animation: zoomIn 1s both;
+    animation: zoomIn 1s both;
+}
+
+#page2 span:nth-child(2) {
+    -webkit-animation: zoomIn 1s both;
     animation: zoomIn 1s both;
 }
 
@@ -487,5 +503,8 @@ html {
         opacity: 1;
     }
 }
+
+
+
 
 /*解决开始的时候显示,然后在动画运动的问题：开始的样式都设置opacity=0 动画结束加上opacity=1*/
